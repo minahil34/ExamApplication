@@ -58,11 +58,7 @@ public class MainActivity extends Fragment {
         btnThree = view.findViewById(R.id.back);
         db = new DBHelper(getContext().getApplicationContext());
 
-
-
-        return view;
-
-    }
+       
 
 
 }
