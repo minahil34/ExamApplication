@@ -58,7 +58,20 @@ public class MainActivity extends Fragment {
         btnThree = view.findViewById(R.id.back);
         db = new DBHelper(getContext().getApplicationContext());
 
-       
+        btnOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                db.clearDB();
+                ExamFragment fragmentOne = new ExamFragment();
+                FragmentTransaction transaction =getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.layoutMainActivity, fragmentOne);
+                transaction.commit();
+            }
+        });
+
+        return view;
+
+    }
 
 
 }
